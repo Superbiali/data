@@ -1,0 +1,24 @@
+#include<iostream>
+#include<fstream>
+using namespace std;
+
+void ArraySum(int n)
+{
+	int *a;
+	a=new int[n];
+	int sum=0;
+	ifstream f("D:\\a.txt");
+	for(int i=0;f>>a[i],i<n;i++)
+		sum+=a[i];
+	cout<<sum<<endl;
+	delete []a;
+}
+
+int main(void)
+{
+	int n;//数组长度
+	cout<<"数组长度"<<endl;
+	cin>>n;
+	ArraySum(n);
+	return 0;
+}

@@ -1,0 +1,30 @@
+#include<iostream>
+#include<fstream>
+using namespace std;
+
+void ArraySum(int n,double x,double y)
+{
+	int *a;
+	a=new int[n];
+	int sum=0;
+	ifstream f("D:\\a.txt");
+	for(int i=0;f>>a[i],i<n;i++)
+		if(a[i]>=x&&a[i]<=y) sum+=a[i];
+	cout<<sum<<endl;
+	delete []a;
+}
+
+int main(void)
+{
+	int n;//数组长度
+	double x;//求和元素最小值
+	double y;//求和元素最大值
+	cout<<"数组长度"<<endl;
+	cin>>n;
+	cout<<"求和元素最小值"<<endl;
+	cin>>x;
+	cout<<"求和元素最大值"<<endl;
+	cin>>y;
+	ArraySum(n,x,y);
+	return 0;
+}

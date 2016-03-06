@@ -1,0 +1,16 @@
+#include<iostream>
+#include<fstream>
+using namespace std;
+
+int main(void)
+{
+	int a[100];
+	int sum=0;
+	ifstream f("D:\\a.txt");
+	for(int i=0;f>>a[i],i<100;i++)
+		sum+=a[i];
+	cout<<sum<<endl;
+	return 0;
+}
+
+
